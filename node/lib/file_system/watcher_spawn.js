@@ -9,9 +9,9 @@ if (!filename) {
   throw Error('A file must be specified!');
 }
 
-fs.watch(filename, function() {
+fs.watch(filename, () => {
   let ls = spawn('ls', ['-lh', filename]);
   ls.stdout.pipe(process.pipe);
 });
 
-console.log('Now watching ' + filename);
+console.log(`Now watching ${filename}`);

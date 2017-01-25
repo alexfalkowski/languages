@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.writeFile('target.txt', 'Hello NodeJS', function(err) {
+fs.writeFile('target.txt', 'Hello NodeJS', (err) => {
   if (err) {
     throw err;
   }

@@ -6,8 +6,8 @@ if (!filename) {
   throw Error('A file must be specified!');
 }
 
-fs.watch(filename, function() {
-  console.log('File ' + filename + ' has changed!');
+fs.watch(filename, () => {
+  console.log(`File ${filename} has changed!`);
 });
 
-console.log('Now watching ' + filename);
+console.log(`Now watching ${filename}`);

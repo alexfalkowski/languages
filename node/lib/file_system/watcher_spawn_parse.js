@@ -9,18 +9,18 @@ if (!filename) {
   throw Error('A file must be specified!');
 }
 
-fs.watch(filename, function() {
+fs.watch(filename, () => {
   let ls = spawn('ls', ['-lh', filename]),
       output = '';
 
-  ls.stdout.on('data', function(chunck) {
+  ls.stdout.on('data', (chunck) => {
     output += chunck.toString();
   });
 
-  ls.on('close', function() {
+  ls.on('close', () => {
     let parts = output.split(/\s+/);
     console.log([parts[0], parts[4], parts[8]]);
   });
 });
 
-console.log('Now watching ' + filename);
+console.log(`Now watching ${filename}`);
