@@ -1,4 +1,4 @@
-module console
+module Console
 
 [<EntryPoint>]
 let main argv =
