@@ -1,6 +1,6 @@
 (defproject playground "0.1.0-SNAPSHOT"
-  :description "FIXME: write this!"
-  :url "http://example.com/FIXME"
+  :description "Playground project."
+  :url "https://github.com/alexfalkowski/languages/tree/master/clojurescript/playground"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.456"]]
   :jvm-opts ^:replace ["-Xmx1g" "-server"]
