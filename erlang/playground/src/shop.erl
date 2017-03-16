@@ -1,8 +1,8 @@
 -module(shop).
 -export([total/1]).
+-import(lists, [map/2, sum/1]).
 
-total([{What, N}|T]) -> cost(What) * N + total(T);
-total([])  -> 0.
+total(L) -> sum(map(fun({What, N}) -> cost(What) * N end, L)).
 
 cost(oranges) -> 5;
 cost(newspaper) -> 8;
