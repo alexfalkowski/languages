@@ -1,12 +1,16 @@
 -module(area_server).
--export([loop/0]).
+-export([rpc/2, loop/0]).
+
+rpc(Pid, Request) ->
+  Pid ! {self(), Request},
+  receive
+    Response -> Response
+  end.
 
 loop() ->
   receive
-    {rectangle, Width, Ht} ->
-      io:format("Area of rectangle is ~p~n",[Width * Ht]);
-    {square, Side} ->
-      io:format("Area of square is ~p~n", [Side * Side])
+    {From, {rectangle, Width, Ht}} -> From ! {ok, Width * Ht};
+    {From, {circle, R}} -> From! {ok, 3.14159*R*R};
+    {From, Other} -> From ! {error,Other}
   end,
-
   loop().
