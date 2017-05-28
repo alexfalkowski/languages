@@ -1,5 +1,4 @@
-// Lissajous generates GIF animations of random Lissajous figures.
-package main
+package lissajous
 
 import (
 	"image"
@@ -8,7 +7,6 @@ import (
 	"io"
 	"math"
 	"math/rand"
-	"os"
 )
 
 var palette = []color.Color{color.White, color.Black}
@@ -18,11 +16,7 @@ const (
 	blackIndex = 1 // next color in palette
 )
 
-func main() {
-	lissajous(os.Stdout)
-}
-
-func lissajous(out io.Writer) {
+func Create(out io.Writer) {
 	const (
 		cycles  = 5     // number of complete x oscillator revolutions
 		res     = 0.001 // angular resolution
