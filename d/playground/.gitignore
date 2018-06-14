@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+playground.so
+playground.dylib
+playground.dll
+playground.a
+playground.lib
+playground-test-*
+*.exe
+*.o
+*.obj
+*.lst

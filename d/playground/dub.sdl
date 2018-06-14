@@ -1,0 +1,5 @@
+name "playground"
+description "A minimal D application."
+authors "Alex Falkowski"
+copyright "Copyright © 2018, Alex Falkowski"
+license "proprietary"
