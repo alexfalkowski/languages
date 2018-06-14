@@ -1,7 +1,7 @@
 import std.stdio;
 
 void main() {
-	write("How many students are there? ");
+    write("How many students are there? ");
     int studentCount;
     readf(" %s", &studentCount);
     write("How many teachers are there? ");
