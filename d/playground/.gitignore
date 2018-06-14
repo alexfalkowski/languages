@@ -8,6 +8,7 @@ playground.dll
 playground.a
 playground.lib
 playground-test-*
+playground
 *.exe
 *.o
 *.obj
