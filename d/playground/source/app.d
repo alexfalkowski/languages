@@ -1,11 +1,7 @@
 import std.stdio;
 
 void main() {
-    write("How many students are there? ");
-    int studentCount;
-    readf(" %s", &studentCount);
-    write("How many teachers are there? ");
-    int teacherCount;
-    readf(" %s", &teacherCount);
-    writeln("Got it: There are ", studentCount, " students", " and ", teacherCount, " teachers.");
+    double zero = 0;
+    double infinity = double.infinity;
+    writeln("any expression with nan: ", double.nan + 1);
 }
