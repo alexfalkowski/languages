@@ -1,4 +1,12 @@
 defmodule Drop do
+  def drop() do
+    receive do
+      {from, planet, distance} ->
+        send(from, {planet, distance, fall_velocity(planet, distance)})
+        drop()
+    end
+  end
+
   def fall_velocity(:earth, distance) when distance >= 0 do
     fall_velocity_of_planet(9.8, distance)
   end
