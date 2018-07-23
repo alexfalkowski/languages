@@ -1,16 +1,18 @@
 defmodule PracticeOtp.Stack do
   use GenServer
 
-  def start_link do
-    GenServer.start_link(__MODULE__, [])
+  @name __MODULE__
+
+  def start_link() do
+    GenServer.start_link(@name, [], name: @name)
   end
 
-  def pop(pid) do
-    GenServer.call(pid, :pop)
+  def pop() do
+    GenServer.call(@name, :pop)
   end
 
-  def push(pid, item) do
-    GenServer.cast(pid, {:push, item})
+  def push(item) do
+    GenServer.cast(@name, {:push, item})
   end
 
   # Callbacks
