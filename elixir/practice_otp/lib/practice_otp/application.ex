@@ -9,7 +9,7 @@ defmodule PracticeOtp.Application do
     # List all child processes to be supervised
     children = [
       # Starts a worker by calling: PracticeOtp.Worker.start_link(arg)
-      # {PracticeOtp.Worker, arg},
+      {PracticeOtp.Stack, []},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

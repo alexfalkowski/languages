@@ -3,8 +3,8 @@ defmodule PracticeOtp.Stack do
 
   @name __MODULE__
 
-  def start_link() do
-    GenServer.start_link(@name, [], name: @name)
+  def start_link(stack) do
+    GenServer.start_link(@name, stack, name: @name)
   end
 
   def pop() do
