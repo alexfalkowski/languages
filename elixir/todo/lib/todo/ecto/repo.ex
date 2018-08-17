@@ -1,3 +1,3 @@
-defmodule Todo.Repo do
+defmodule Todo.Ecto.Repo do
   use Ecto.Repo, otp_app: :todo
 end

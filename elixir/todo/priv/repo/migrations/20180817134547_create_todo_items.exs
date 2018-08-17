@@ -1,4 +1,4 @@
-defmodule Todo.Repo.Migrations.CreateTodoItems do
+defmodule Todo.Ecto.Repo.Migrations.CreateTodoItems do
   use Ecto.Migration
 
   def change do

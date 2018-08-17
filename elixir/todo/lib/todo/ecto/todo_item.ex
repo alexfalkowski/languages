@@ -1,4 +1,4 @@
-defmodule Todo.TodoItem do
+defmodule Todo.Ecto.TodoItem do
   use Ecto.Schema
 
   schema "todo_items" do
